@@ -3,6 +3,8 @@ Inspired by hackathon enthusiasts, Architect was created to help participants ra
 generate designs, craft architectures, and analyze project feasibility. Its ultimate goal is to empower dreamers and innovators to turn their ideas into reality in the 
 chaotic atmosphere of a hackathon.
 
+![Screenshot 2023-07-23 150131](https://github.com/Ananya2001-an/Architect/assets/55504616/47f23d28-a646-4ac7-8679-fc66ac3a9a42)
+
 ## What it does
 - Architect is a powerful AI tool that uses three distinct language models to help users develop their project ideas. The Frontend Design Language Model (FLLM) provides potential frontend features and design concepts, while the Backend Architecture Language Model (BLLM) suggests backend architectures and database solutions. The Feasibility Analysis Language Model (FALM) then evaluates the compatibility of the proposed technologies, user skills, and time constraints to ensure a successful project.
 
