@@ -29,6 +29,16 @@ async def get_backend_results():
             st.text('Comments 👇')
             st.info(output_json["comments"], icon="ℹ️")
 
+    with st.container():
+        st.text('Backend features 👇')
+        st.caption(output_json["features"])
+        
+        st.divider()
+
+        st.text('Backend specifications 👇')
+        st.caption(output_json["specifications"])
+    
+
 async def get_frontend_results():
     output = await frontend_chain(inputs = {
         'project_details': project_details,
@@ -47,6 +57,15 @@ async def get_frontend_results():
         with st.container():
             st.text('Comments 👇')
             st.info(output_json["comments"], icon="ℹ️")
+
+    with st.container():
+        st.text('Frontend features 👇')
+        st.caption(output_json["features"])
+        
+        st.divider()
+
+        st.text('Frontend specifications 👇')
+        st.caption(output_json["specifications"])
 
 
 async def run_tasks():
