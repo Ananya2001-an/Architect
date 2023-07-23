@@ -11,6 +11,6 @@ st.text_area(label='What is your app\'s tech stack?', placeholder='OpenAI API, S
 
 st.slider('How many members are there in your team?', 1, 5)
 
-st.multiselect('What is your team\'s skill level?', ["beginner", "intermediate", "experienced"])
+st.radio('What is your team\'s skill level?', ["beginner", "intermediate", "experienced"])
 
 st.button(label='Generate Result')
