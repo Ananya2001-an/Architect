@@ -5,14 +5,12 @@ st.text("Architect helps you quickly prototype and validate your ideas for hacka
 
 st.divider()
 
-st.text_area(label='How your app should look?', placeholder='Eg. Webapp that allows users to signup, search up a fundraiser and donate to it...')
+st.text_area(label='What is the functionality of your webapp? (both frontend and backend)', placeholder='Eg. Webapp that allows users to signup, search up a fundraiser and donate to it...')
 
-st.multiselect('What is your app\'s tech stack?', ["javascript", "react", "firebase", "python", "java", "git", "css", "azure", "aws", "nodejs", "flask", "fastapi", "sql", "mongodb", "nosql", "appwrite", "machine learning"])
+st.text_area(label='What is your app\'s tech stack?', placeholder='OpenAI API, Streamlit, Javascript,...')
 
 st.slider('How many members are there in your team?', 1, 5)
 
-st.multiselect('What are your team\'s skills?', ["javascript", "react", "firebase", "python", "java", "git", "css", "azure", "aws", "nodejs", "flask", "fastapi", "sql", "mongodb", "nosql", "appwrite", "machine learning"])
-
-st.number_input('What is the hackathon deadline?', 0, 200)
+st.radio('What is your team\'s skill level?', ["beginner", "intermediate", "experienced"])
 
 st.button(label='Generate Result')
