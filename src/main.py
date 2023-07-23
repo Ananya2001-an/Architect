@@ -2,7 +2,7 @@ import streamlit as st
 import asyncio
 import json
 from langchain.chat_models import ChatOpenAI
-from backend_chain import backend_chain
+from backend_chain import *
 from frontend_chain import frontend_chain
 import dotenv
 dotenv.load_dotenv()
@@ -10,15 +10,16 @@ dotenv.load_dotenv()
 llm = ChatOpenAI(temperature=0, max_tokens=1000, model="gpt-3.5-turbo")
 advanced_llm = ChatOpenAI(temperature=0, max_tokens=1000, model="gpt-4")
 
-async def get_backend_results():
-    output = await backend_chain(inputs = {
-        'project_details': project_details,
-        "project_technologies": project_technologies,
-        "group_size": group_size,
-        "group_experience": group_experience
-    },
-    llm=llm,
-    advanced_llm=advanced_llm)
+async def get_backend_results(output=None):
+    if output is None:
+        output = await backend_chain(inputs = {
+            'project_details': project_details,
+            "project_technologies": project_technologies,
+            "group_size": group_size,
+            "group_experience": group_experience
+        },
+        llm=llm,
+        advanced_llm=advanced_llm)
     output_json = json.loads(output)
     if output_json["approval"] == "1":
         st.success('Backend approved! This project is feasible according to the hackathon time period.', icon="✅")
@@ -28,6 +29,13 @@ async def get_backend_results():
         with st.container():
             st.text('Comments 👇')
             st.info(output_json["comments"], icon="ℹ️")
+        
+        revise = st.button('Revise result')
+        if revise:
+            revised_output = await backend_revision(output, project_technologies, group_size, group_experience)
+            print(revised_output)
+            # get_backend_results(output=revised_output)
+
 
     with st.container():
         st.text('Backend features 👇')
