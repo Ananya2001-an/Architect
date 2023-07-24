@@ -3,6 +3,8 @@ Inspired by hackathon enthusiasts, Architect was created to help participants ra
 generate designs, craft architectures, and analyze project feasibility. Its ultimate goal is to empower dreamers and innovators to turn their ideas into reality in the 
 chaotic atmosphere of a hackathon.
 
+> This project won the third overall prize in Hacks for Hackers hackathon conducted by MLH 🏆 View details [here](https://devpost.com/software/architect-rev4cq)
+
 ![Screenshot 2023-07-23 150131](https://github.com/Ananya2001-an/Architect/assets/55504616/47f23d28-a646-4ac7-8679-fc66ac3a9a42)
 
 ## What it does
